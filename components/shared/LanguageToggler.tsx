@@ -18,7 +18,7 @@ export function LanguageToggler() {
   }, [setLanguage]);
 
   const toggleLanguage = () => {
-    const newLanguage = language === "EN" ? "ES" : "EN";
+    const newLanguage = language === "ES" ? "EN" : "ES";
     setLanguage(newLanguage);
     localStorage.setItem("language", newLanguage);
   };
@@ -42,9 +42,9 @@ export function LanguageToggler() {
       >
         <span
           className={`transition-transform ${
-            language === "EN"
-              ? "translate-x-6 bg-blue-300 dark:bg-blue-700"
-              : "translate-x-0 bg-red-300 dark:bg-red-700"
+            language === "ES"
+              ? "translate-x-0 bg-red-300 dark:bg-red-700 "
+              : "translate-x-6 bg-blue-300 dark:bg-blue-700 "
           } rounded-full px-1 text-light-text dark:text-dark-text`}
         >
           {language === "ES" ? "ES" : "EN"}

@@ -13,7 +13,7 @@ import * as es from "@/public/translations/es.json";
 
 interface GlobalState {
   language: "EN" | "ES";
-  setLanguage: (lang: "ES" | "EN") => void;
+  setLanguage: (lang: "EN" | "ES") => void;
   translation: typeof en | typeof es;
 }
 
@@ -22,7 +22,7 @@ const GlobalContext = createContext<GlobalState | undefined>(undefined);
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [language, setLanguage] = useState<"ES" | "EN">("EN");
+  const [language, setLanguage] = useState<"EN" | "ES">("EN");
   const [translation, setTranslation] = useState<typeof en | typeof es>(en);
 
   useEffect(() => {
