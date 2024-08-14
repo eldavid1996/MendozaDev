@@ -1,0 +1,39 @@
+{
+  "languageTogglerTitle": "Toggle language",
+  "themeTogglerTitle": "Toggle theme",
+  "navBar": {
+    "home": "Home",
+    "aboutme": "About me",
+    "projects": "Projects",
+    "studies": "Studies"
+  },
+  "home": {
+    "headerTitle": "Home",
+    "introduccion": {
+      "altImage": "A guy working on a computer",
+      "headerTitle": "Hi, I'm Mendoza,",
+      "headerSubtitle1": "Frontend Developer",
+      "headerSubtitle2": "Backend Developer",
+      "headerSubtitle3": "Software Developer",
+      "headerSubtitle4": "Systems Administrator",
+      "content": "Fontend and backend developer dedicated to combining design and functionality to create impactful and accessible digital experiences",
+      "textLink1": "My projects",
+      "textLink2": "Link to my CV"
+    }
+  },
+  "projects": {
+    "myProjects": {
+      "headerTitle": "My lastest ",
+      "headerSubtitle": "works done",
+      "projectDescription": [
+        "System to manage the cleaning of hotel rooms",
+        "Web Chat with a similar design to Whatsapp",
+        "Website to download games for free"
+      ]
+    }
+  },
+  "notFound": {
+    "headerTitle": "Page not found",
+    "headerSubtitle": "The page you are looking for does not exist"
+  }
+}

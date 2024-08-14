@@ -1,0 +1,39 @@
+{
+  "themeTogglerTitle": "Cambiar tema",
+  "languageTogglerTitle": "Cambiar idioma",
+  "navBar": {
+    "home": "Inicio",
+    "aboutme": "Sobre mí",
+    "projects": "Proyectos",
+    "studies": "Estudios"
+  },
+  "home": {
+    "headerTitle": "Inicio",
+    "introduccion": {
+      "altImage": "Un chico trabajando en una computadora",
+      "headerTitle": "Hola soy Mendoza,",
+      "headerSubtitle1": "Desarrollador Frontend",
+      "headerSubtitle2": "Desarrollador Backend",
+      "headerSubtitle3": "Desarrollador de Software",
+      "headerSubtitle4": "Administrador de sistemas",
+      "content": "Desarrollador de fontend y backend dedicado a combinar diseño y funcionalidad para crear experiencias digitales impactantes y accesibles",
+      "textLink1": "Mis proyectos",
+      "textLink2": "Enlace a mi CV"
+    }
+  },
+  "projects": {
+    "myProjects": {
+      "headerTitle": "Mis últimos ",
+      "headerSubtitle": "trabajos realizados",
+      "projectDescription": [
+        "Sistema para gestionar la limpieza de habitaciones de hoteles",
+        "Chat web moderno con un diseño similar al de Whatsapp",
+        "Página web para descargar juegos de manera gratuita"
+      ]
+    }
+  },
+  "notFound": {
+    "headerTitle": "Página no encontrada",
+    "headerSubtitle": "La página que solicitaste no existe"
+  }
+}

@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-no-repeat 
+  bg-grandient-cover
+  dark:bg-dark-grandient-cover
+text-light-text
+dark:text-dark-text
+  h-[100vh]
+  w-[100vw]
+  overflow-x-hidden
+  overflow-y-hidden;
+}
