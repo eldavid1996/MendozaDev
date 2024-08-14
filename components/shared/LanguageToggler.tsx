@@ -28,10 +28,10 @@ export function LanguageToggler() {
       position="left"
       className="fixed z-40 bottom-10 left-1 flex flex-col items-center gap-2 sm:left-12"
     >
-      {language === "EN" ? (
-        <UnitedKingdomFlag width={36} height={36} />
-      ) : (
+      {language === "ES" ? (
         <SpanishFlag width={36} height={36} />
+      ) : (
+        <UnitedKingdomFlag width={36} height={36} />
       )}
 
       <button
