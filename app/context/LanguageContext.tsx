@@ -12,7 +12,7 @@ import * as en from "@/public/translations/en.json";
 import * as es from "@/public/translations/es.json";
 
 interface GlobalState {
-  language: "ES" | "EN";
+  language: "EN" | "ES";
   setLanguage: (lang: "ES" | "EN") => void;
   translation: typeof en | typeof es;
 }
@@ -22,12 +22,12 @@ const GlobalContext = createContext<GlobalState | undefined>(undefined);
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [language, setLanguage] = useState<"ES" | "EN">("ES");
+  const [language, setLanguage] = useState<"ES" | "EN">("EN");
   const [translation, setTranslation] = useState<typeof en | typeof es>(en);
 
   useEffect(() => {
     const cookieLanguage = localStorage.getItem("language");
-    setLanguage(cookieLanguage as "ES" | "EN");
+    setLanguage(cookieLanguage as "EN" | "ES");
     cookieLanguage == "ES" ? setTranslation(es) : setTranslation(en);
   }, [language]);
 
