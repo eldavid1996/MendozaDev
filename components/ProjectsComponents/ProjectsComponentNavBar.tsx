@@ -1,51 +1,6 @@
 import Image from "next/image";
 // import { RightArrowIcon, LeftArrowIcon } from "../shared/icons/projects";
 
-const itemsProjects = [
-  {
-    name: "MendoGames",
-    logo: (
-      <Image
-        key={0}
-        priority
-        alt="MendoGames logo"
-        src="/images/projects/mendogames/mendogames-logo.png"
-        width={32}
-        height={32}
-        className="w-full h-auto rounded-lg"
-      />
-    ),
-  },
-  {
-    name: "BRoom",
-    logo: (
-      <Image
-        key={0}
-        priority
-        alt="Broom logo"
-        src="/images/projects/broom/broom-logo.png"
-        width={32}
-        height={32}
-        className="w-full h-auto rounded-lg"
-      />
-    ),
-  },
-  {
-    name: "MendozApp",
-    logo: (
-      <Image
-        key={0}
-        priority
-        alt="MendozApp logo"
-        src="/images/projects/mendozapp/mendozapp-logo.png"
-        width={32}
-        height={32}
-        className="w-full h-auto rounded-lg"
-      />
-    ),
-  },
-];
-
 interface ProjectsComponentNavBarProps {
   actualProjectId: number;
   setActualProject: (id: number) => void;
@@ -92,3 +47,48 @@ export function ProjectsComponentNavBar({
     </nav>
   );
 }
+
+const itemsProjects = [
+  {
+    name: "MendoGames",
+    logo: (
+      <Image
+        key={0}
+        priority
+        alt="MendoGames logo"
+        src="/images/projects/mendogames/mendogames-logo.png"
+        width={32}
+        height={32}
+        className="w-full h-auto rounded-lg"
+      />
+    ),
+  },
+  {
+    name: "BRoom",
+    logo: (
+      <Image
+        key={1}
+        priority
+        alt="Broom logo"
+        src="/images/projects/broom/broom-logo.png"
+        width={32}
+        height={32}
+        className="w-full h-auto rounded-lg"
+      />
+    ),
+  },
+  {
+    name: "MendozApp",
+    logo: (
+      <Image
+        key={2}
+        priority
+        alt="MendozApp logo"
+        src="/images/projects/mendozapp/mendozapp-logo.png"
+        width={32}
+        height={32}
+        className="w-full h-auto rounded-lg"
+      />
+    ),
+  },
+];

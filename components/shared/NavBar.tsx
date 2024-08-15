@@ -3,27 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguageContext } from "@/app/context/LanguageContext";
-import { MotionTransition } from "./effetcs/MotionTransition";
+import { MovementTransition } from "./effetcs";
 import { HomeIcon, ProjectsIcon, StudiesIcon, UserIcon } from "./icons/navbar";
-
-const itemsNavBar = [
-  {
-    icon: <HomeIcon width={32} height={32} />,
-    link: "/",
-  },
-  {
-    icon: <UserIcon width={32} height={32} />,
-    link: "/aboutme",
-  },
-  {
-    icon: <ProjectsIcon width={32} height={32} />,
-    link: "/projects",
-  },
-  {
-    icon: <StudiesIcon width={32} height={32} />,
-    link: "/studies",
-  },
-];
 
 export function NavBar() {
   const pathname = usePathname();
@@ -41,7 +22,7 @@ export function NavBar() {
       aria-label="Main navigation"
       className="fixed z-40 bottom-8 w-full flex justify-center"
     >
-      <MotionTransition
+      <MovementTransition
         position="top"
         className="fixed flex bottom-8 justify-center w-full p-auto"
       >
@@ -62,7 +43,26 @@ export function NavBar() {
             </Link>
           ))}
         </div>
-      </MotionTransition>
+      </MovementTransition>
     </nav>
   );
 }
+
+const itemsNavBar = [
+  {
+    icon: <HomeIcon width={32} height={32} />,
+    link: "/",
+  },
+  {
+    icon: <UserIcon width={32} height={32} />,
+    link: "/aboutme",
+  },
+  {
+    icon: <ProjectsIcon width={32} height={32} />,
+    link: "/projects",
+  },
+  {
+    icon: <StudiesIcon width={32} height={32} />,
+    link: "/studies",
+  },
+];

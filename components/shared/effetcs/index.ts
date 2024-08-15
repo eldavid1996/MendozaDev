@@ -1,3 +1,4 @@
-export * from './BackgroundCover';
-export * from './MotionTransition';
-export * from './PageTransition';
+export * from "./BackgroundCover";
+export * from "./TransparentTransition";
+export * from "./MovementTransition";
+export * from "./PageTransition";

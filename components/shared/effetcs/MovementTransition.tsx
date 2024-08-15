@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 
-interface MotionTransitionProps {
+interface MovementTransitionProps {
   children: React.ReactNode;
   position: "bottom" | "right" | "top" | "left";
   className?: string;
 }
 
-export function MotionTransition(props: MotionTransitionProps) {
+export function MovementTransition(props: MovementTransitionProps) {
   const { children, position, className } = props;
   return (
     <motion.div

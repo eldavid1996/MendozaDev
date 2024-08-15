@@ -24,6 +24,9 @@ const config: Config = {
         "dark-grandient-cover":
           "linear-gradient(to right top, #3a0a5a, #4d2a78, #6f4d8b, #8a74a1, #a18bba);",
       },
+      screens: {
+        xs: "500px",
+      },
     },
   },
   darkMode: "class",

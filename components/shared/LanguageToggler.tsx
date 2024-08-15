@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { SpanishFlag, UnitedKingdomFlag } from "./icons/language-toggler";
-import { MotionTransition } from "./effetcs/MotionTransition";
+import { MovementTransition } from "./effetcs";
 import { useLanguageContext } from "@/app/context/LanguageContext";
 
 export function LanguageToggler() {
@@ -24,7 +24,7 @@ export function LanguageToggler() {
   };
 
   return (
-    <MotionTransition
+    <MovementTransition
       position="left"
       className="fixed z-40 bottom-10 left-1 flex flex-col items-center gap-2 sm:left-12"
     >
@@ -50,6 +50,6 @@ export function LanguageToggler() {
           {language === "ES" ? "ES" : "EN"}
         </span>
       </button>
-    </MotionTransition>
+    </MovementTransition>
   );
 }

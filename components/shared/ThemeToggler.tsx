@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useLanguageContext } from "@/app/context/LanguageContext";
-import { MotionTransition } from "./effetcs/MotionTransition";
+import { MovementTransition } from "./effetcs";
 import { LightOffIcon, LightOnIcon } from "./icons/theme-toggler";
 
 export function ThemeToggler() {
@@ -28,7 +28,7 @@ export function ThemeToggler() {
   };
 
   return (
-    <MotionTransition
+    <MovementTransition
       position="right"
       className="fixed z-40 bottom-10 right-1 flex flex-col items-center gap-2  sm:right-12"
     >
@@ -51,6 +51,6 @@ export function ThemeToggler() {
           {theme === "light" ? "ON" : "OFF"}
         </span>
       </button>
-    </MotionTransition>
+    </MovementTransition>
   );
 }
