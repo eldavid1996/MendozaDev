@@ -12,7 +12,7 @@ const itemsProjects = [
   },
   {
     gihub: "https://github.com/eldavid1996/BRoom",
-    web: "https://broom-lcznpdc57-proyectos-david-mendoza.vercel.app/",
+    web: "https://broom-sigma.vercel.app/",
   },
   {
     gihub: "https://github.com/eldavid1996/MendozApp",
