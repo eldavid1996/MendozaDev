@@ -8,6 +8,14 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": [
+        "components/*"
+      ]
+    }
+  },
   "dependencies": {
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
