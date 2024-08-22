@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguageContext } from "@/app/context/LanguageContext";
-import { MovementTransition } from "@/components/shared";
+import { MovementTransition } from "@/components/Shared/MovementTransition";
 import { SpanishFlag, UnitedKingdomFlag } from "./Icons";
 import { Icon } from "./Icon";
 import { Button } from "./Button";

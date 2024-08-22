@@ -1,4 +1,4 @@
-import { ToggleLanguageTransition } from "@/components/shared";
+import { ToggleLanguageTransition } from "@/components/Shared/ToggleLanguageTransition";
 
 interface SwitchProps {
   language: "ES" | "EN";

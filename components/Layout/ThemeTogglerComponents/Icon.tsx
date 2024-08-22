@@ -1,5 +1,5 @@
 import { SVGProps } from "react";
-import { ToggleThemeTransition } from "@/components/shared";
+import { ToggleThemeTransition } from "@/components/Shared/ToggleThemeTransition";
 
 interface IconProps {
   theme?: string;

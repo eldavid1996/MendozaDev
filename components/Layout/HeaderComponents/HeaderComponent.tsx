@@ -2,7 +2,7 @@
 
 import { useLanguageContext } from "@/app/context/LanguageContext";
 import { useNavigationContext } from "@/app/context/NavigationContext";
-import { MovementTransition } from "@/components/shared";
+import { MovementTransition } from "@/components/Shared/MovementTransition";
 import { GithubIcon, LinkedinIcon, MailIcon, SmartPhoneIcon } from "./Icons";
 import { Logo } from "./Logo";
 import { SocialBar } from "./SocialBar";

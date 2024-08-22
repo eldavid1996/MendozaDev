@@ -1,5 +1,5 @@
 import { SVGProps } from "react";
-import { ToggleLanguageTransition } from "@/components/shared";
+import { ToggleLanguageTransition } from "@/components/Shared/ToggleLanguageTransition";
 
 interface IconProps {
   language: "ES" | "EN";

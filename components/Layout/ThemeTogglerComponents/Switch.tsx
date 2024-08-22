@@ -1,4 +1,4 @@
-import { ToggleThemeTransition } from "@/components/shared";
+import { ToggleThemeTransition } from "@/components/Shared/ToggleThemeTransition";
 
 interface SwitchProps {
   theme?: string;

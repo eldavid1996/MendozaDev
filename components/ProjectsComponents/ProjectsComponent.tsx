@@ -1,16 +1,14 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useLanguageContext } from "@/app/context/LanguageContext";
-import {
-  ToggleLanguageTransition,
-  TransparentMovementTransition,
-} from "@/components/shared";
 import { BRoomLogo, MendoGamesLogo, MendoZappLogo } from "./Icons";
 import { Image as AsideImage } from "./Image";
 import { Header } from "./Header";
 import { NavBar } from "./NavBar";
 import { Images } from "./Images";
 import { Footer } from "./Footer";
+import { TransparentMovementTransition } from "../Shared/TransparentMovementTransition";
+import { ToggleLanguageTransition } from "../Shared/ToggleLanguageTransition";
 
 export function ProjectsComponent() {
   const [actualProjectId, setActualProject] = useState(0);
