@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useLanguageContext } from "@/app/context/LanguageContext";
 import { useNavigationContext } from "@/app/context/NavigationContext";
-import { MovementTransition } from "@/components/Shared";
+import { MovementTransition } from "@/components/shared";
 import { HomeIcon, ProjectsIcon, StudiesIcon, UserIcon } from "./Icons";
 import { NavBar } from "./NavBar";
 

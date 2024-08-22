@@ -4,7 +4,7 @@ import { useLanguageContext } from "@/app/context/LanguageContext";
 import {
   ToggleLanguageTransition,
   TransparentMovementTransition,
-} from "@/components/Shared";
+} from "@/components/shared";
 import { BRoomLogo, MendoGamesLogo, MendoZappLogo } from "./Icons";
 import { Image as AsideImage } from "./Image";
 import { Header } from "./Header";

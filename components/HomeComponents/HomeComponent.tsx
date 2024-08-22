@@ -1,6 +1,6 @@
 import { useLanguageContext } from "@/app/context/LanguageContext";
 import { useNavigationContext } from "@/app/context/NavigationContext";
-import { ToggleLanguageTransition } from "@/components/Shared";
+import { ToggleLanguageTransition } from "@/components/shared";
 import { Image as AsideImage } from "./Image";
 import { Card as SectionCard } from "./Card";
 

@@ -1,4 +1,4 @@
-import { ToggleLanguageTransition } from "@/components/Shared";
+import { ToggleLanguageTransition } from "@/components/shared";
 
 interface HeaderProps {
   headerTitle: string;

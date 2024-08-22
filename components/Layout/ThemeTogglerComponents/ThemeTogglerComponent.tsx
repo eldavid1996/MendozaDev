@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { useLanguageContext } from "@/app/context/LanguageContext";
-import { MovementTransition } from "@/components/Shared";
+import { MovementTransition } from "@/components/shared";
 import { LightOffIcon, LightOnIcon } from "./Icons";
 import { Icon } from "./Icon";
 import { Button } from "./Button";
