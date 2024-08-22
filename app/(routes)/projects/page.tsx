@@ -1,17 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { PageTransition } from "@/components/shared/effetcs";
+import { useEffect } from "react";
 import { ProjectsComponent } from "@/components/ProjectsComponents/ProjectsComponent";
 
 export default function Projects() {
-  const [showProjectsComponent, setShowProjectsComponent] = useState(false);
-  return (
-    <>
-      <PageTransition
-        onAnimationComplete={() => setShowProjectsComponent(true)}
-      />
-      {showProjectsComponent && <ProjectsComponent />}
-    </>
-  );
+  useEffect(() => {
+    document.title = "MendozaDev - Projects";
+  }, []);
+
+  return <ProjectsComponent />;
 }

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 body {
-  @apply bg-no-repeat 
-  bg-grandient-cover
-  dark:bg-dark-grandient-cover
-text-light-text
-dark:text-dark-text
+  @apply bg-cyan-500
+dark:bg-purple-950
   h-[100vh]
   w-[100vw]
   overflow-x-hidden
-  overflow-y-hidden;
+  overflow-y-hidden
+  transition-colors
+  duration-1000 
+  ease-in-out;
 }

@@ -1,39 +1,36 @@
 {
-  "themeTogglerTitle": "Cambiar tema",
-  "languageTogglerTitle": "Cambiar idioma",
-  "navBar": {
-    "home": "Inicio",
-    "aboutme": "Sobre mí",
-    "projects": "Proyectos",
-    "studies": "Estudios"
-  },
-  "home": {
-    "headerTitle": "Inicio",
-    "introduccion": {
-      "altImage": "Un chico trabajando en una computadora",
-      "headerTitle": "Hola soy Mendoza,",
-      "headerSubtitle1": "Desarrollador Frontend",
-      "headerSubtitle2": "Desarrollador Backend",
-      "headerSubtitle3": "Desarrollador de Software",
-      "headerSubtitle4": "Administrador de sistemas",
-      "content": "Desarrollador de fontend y backend dedicado a combinar diseño y funcionalidad para crear experiencias digitales impactantes y accesibles",
-      "textLink1": "Mis proyectos",
-      "textLink2": "Enlace a mi CV"
-    }
-  },
-  "projects": {
-    "myProjects": {
-      "headerTitle": "Mis últimos ",
-      "headerSubtitle": "trabajos realizados",
-      "projectDescription": [
-        "Página web para descargar juegos de manera gratuita",
-        "Sistema para gestionar la limpieza de habitaciones de hoteles",
-        "Chat web moderno con un diseño similar al de Whatsapp"
-      ]
-    }
-  },
-  "notFound": {
-    "headerTitle": "Página no encontrada",
-    "headerSubtitle": "La página que solicitaste no existe"
-  }
+  "header.title": "Inicio",
+
+  "languageToggler.title": "Cambiar idioma",
+
+  "themeToggler.title": "Cambiar tema",
+
+  "navBar.home": "Inicio",
+  "navBar.aboutMe": "Sobre mí",
+  "navBar.projects": "Proyectos",
+  "navBar.studies": "Estudios",
+
+  "home.altImage": "Un chico trabajando en un ordenador",
+  "home.headerTitle": "Hola, soy Mendoza,",
+  "home.headerSubtitles": [
+    "Desarrollador Frontend",
+    "Desarrollador Backend",
+    "Desarrollador de Software",
+    "Administrador de sistemas"
+  ],
+  "home.content": "Desarrollador de frontend y backend dedicado a combinar diseño y funcionalidad para crear experiencias digitales impactantes y accesibles",
+  "home.textLink1": "Mis proyectos",
+  "home.textLink2": "Enlace a mi CV",
+
+  "projects.altImage": "Un chico mirando una lista de proyectos",
+  "projects.headerTitle": "Mis últimos ",
+  "projects.headerSubtitle": "trabajos realizados",
+  "projects.projectDescriptions": [
+    "Página web para descargar juegos de manera gratuita",
+    "Sistema para gestionar la limpieza de habitaciones de hoteles",
+    "Chat web moderno con un diseño similar al de Whatsapp"
+  ],
+
+  "notFound.headerTitle": "Página no encontrada",
+  "notFound.headerSubtitle": "La página que solicitaste no existe"
 }

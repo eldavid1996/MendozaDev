@@ -1,16 +1,24 @@
-import type { Metadata } from "next";
-import { Urbanist } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
+import { Montserrat } from "next/font/google";
+import { NavigationProvider } from "./context/NavigationContext";
 import { LanguageProvider } from "./context/LanguageContext";
 import {
-  ThemeToggler,
-  LanguageToggler,
-  Header,
-  NavBar,
-} from "@/components/shared";
-import { BackgroundCover } from "@/components/shared/effetcs";
+  HeaderComponent,
+  LanguageTogglerComponent,
+  NavBarComponent,
+  ThemeTogglerComponent,
+} from "@/components/Layout";
+import {
+  BackGroundCover,
+  BackgroundParticlesCover,
+  PageNavigateTransition,
+  SpinnerFirstLoadPage,
+  TransparentTransitionPages,
+} from "@/components/Layout/Effects";
 
-const urbanist = Urbanist({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MendozaDev",
@@ -18,9 +26,6 @@ export const metadata: Metadata = {
     "Portfolio web made by David Mendoza for show my works and skills",
   icons: {
     icon: "favicon.ico",
-    shortcut: "favicon.ico",
-    apple: "favicon.ico",
-    other: { rel: "icon", url: "favicon.ico" },
   },
 };
 
@@ -30,16 +35,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={urbanist.className}>
-        <LanguageProvider>
-          <BackgroundCover />
-          <Header />
-          <NavBar />
-          <LanguageToggler />
-          <ThemeToggler />
-          {children}
-        </LanguageProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={montserrat.className + " antialiased"}>
+        {/* Theme and Language Providers for manage them */}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <LanguageProvider>
+            {/* NavigationProvider For manage agradable transitions between pages before load contents */}
+            <NavigationProvider>
+              {/* Page Background */}
+              <BackgroundParticlesCover />
+              <BackGroundCover />
+
+              {/* Layout Components */}
+              <HeaderComponent />
+              <NavBarComponent />
+              <ThemeTogglerComponent />
+              <LanguageTogglerComponent />
+
+              {/* Spinner for show in first load page while loading */}
+              <SpinnerFirstLoadPage />
+
+              {/* Use the context useNavigationContext for make agradable transition between pages */}
+              <PageNavigateTransition>
+                {/* <Main> Other little transition animation when components content loads */}
+                <TransparentTransitionPages>
+                  {/* Main content (routes) */}
+                  {children}
+                </TransparentTransitionPages>
+              </PageNavigateTransition>
+            </NavigationProvider>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

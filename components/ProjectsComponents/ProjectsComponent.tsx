@@ -1,91 +1,207 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import { useLanguageContext } from "@/app/context/LanguageContext";
-import { TransparentTransition } from "../shared/effetcs";
-import { ProjectsComponentNavBar } from "./ProjectsComponentNavBar";
-import { ProjectsComponentImages } from "./ProjectsComponentImages";
+import {
+  ToggleLanguageTransition,
+  TransparentMovementTransition,
+} from "@/components/Shared";
+import { BRoomLogo, MendoGamesLogo, MendoZappLogo } from "./Icons";
+import { Image as AsideImage } from "./Image";
+import { Header } from "./Header";
+import { NavBar } from "./NavBar";
+import { Images } from "./Images";
+import { Footer } from "./Footer";
 
 export function ProjectsComponent() {
-  const { translation } = useLanguageContext();
   const [actualProjectId, setActualProject] = useState(0);
+  const { translation } = useLanguageContext();
+
+  const {
+    "projects.altImage": altImage,
+    "projects.headerTitle": headerTitle,
+    "projects.headerSubtitle": headerSubtitle,
+    "projects.projectDescriptions": projectDescriptions,
+  } = translation;
 
   return (
-    <main>
-      <aside className="fixed right-0 -bottom-5 z-[-1] opacity-20 w-auto h-auto max-w-[900px] max-h-[900px]">
-        <Image
-          src="/images/Projects.png"
-          alt={translation.home.introduccion.altImage}
-          priority
-          width={400}
-          height={400}
-          style={{ width: "100%", height: "auto" }}
-        />
-      </aside>{" "}
-      <section className="flex flex-col space-y-4 lg:gap-y-6 items-center md:justify-center font-bold fixed z-[0] inset-0 px-28 my-28 xl:pb-12 rounded-full bg-light-bg/[0.03] dark:bg-dark-bg/[0.03]">
-        <h1 className="text-center text-xs sm:text-lg max-md:mt-5 md:text-3xl xl:text-5xl w-full transform hover:scale-110 duration-300 ease-in-out">
-          {translation.projects.myProjects.headerTitle}
-          <span className="text-secondary">
-            {translation.projects.myProjects.headerSubtitle}
-          </span>
-        </h1>
-        {/* ➕ Little component useful for divide code */}
-        <ProjectsComponentNavBar
-          actualProjectId={actualProjectId}
-          setActualProject={setActualProject}
-        />
-        <AnimatePresence mode="wait">
-          <TransparentTransition key={actualProjectId} x="none" y="bottom">
-            <article className="grid grid-cols-1 md:grid-cols-3 grid-rows-3 md:grid-rows-1 items-center justify-items-center sm:gap-8">
-              <h1 className="font-mono max-md:hidden md:mr-32 text-center xl:text-2xl transform hover:scale-110 duration-300 ease-in-out">
-                {
-                  translation.projects.myProjects.projectDescription[
-                    actualProjectId
-                  ]
-                }
-              </h1>
-              {/* ➕ Another Little component useful for divide code */}
-              <ProjectsComponentImages actualProjectId={actualProjectId} />
-              <footer className="max-md:mb-10 md:ml-36 flex flex-col items-center w-full gap-y-4 xl:gap-y-6 text-sm md:text-md lg:text-xl">
-                <div className="flex gap-x-12 xl:gap-x-24 mb-6">
-                  <Link
-                    target="_blank"
-                    href={itemsProjects[actualProjectId].gihub}
-                    title="Github"
-                    className="p-1 md:p-2 2xl:p-3 border-4 rounded-full bg-light-bg/25 dark:bg-dark-bg/25 hover:shadow-xl hover:shadow-dark-bg/50 dark:hover:shadow-light-bg/50 border-light-bg dark:border-dark-bg transform hover:scale-110 duration-300 ease-in-out"
-                  >
-                    Github
-                  </Link>
-                  <Link
-                    target="_blank"
-                    href={itemsProjects[actualProjectId].web}
-                    title="Website"
-                    className="p-1 md:p-2 2xl:p-3 border-4 rounded-full bg-light-bg/25 dark:bg-dark-bg/25 hover:shadow-xl hover:shadow-dark-bg/50 dark:hover:shadow-light-bg/50 text-secondary border-secondary transform hover:scale-110 duration-300 ease-in-out"
-                  >
-                    Website
-                  </Link>
-                </div>
-              </footer>
-            </article>{" "}
-          </TransparentTransition>
-        </AnimatePresence>
+    <>
+      <section
+        className={`relative flex flex-col h-screen items-center justify-center
+          max-md:flex-col`}
+      >
+        {/*  Header */}
+        <Header headerTitle={headerTitle} headerSubtitle={headerSubtitle} />
+        {/* Navbar */}
+        <div className="md:flex">
+          <NavBar
+            items={items}
+            actualProjectId={actualProjectId}
+            setActualProject={setActualProject}
+          />
+
+          {/* ➕ Card Style */}
+          <div
+            className={`flex flex-col rounded-3xl w-full max-w-md mt-2 
+              xs:max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-5xl 
+              transform 2xl:hover:scale-105 transition-transform duration-500 ease-in-out `}
+          >
+            <div
+              className={`flex flex-col rounded-3xl shadow-2xl shadow-black dark:shadow-white 
+                 transition-shadow duration-1000 ease-in-out`}
+            >
+              <div
+                className={`flex flex-col rounded-3xl p-4 md:p-8 gap-4 bg-white/60 dark:bg-black/60
+                  transition-colors duration-1000 ease-in-out`}
+              >
+                {/* Transition when project changes */}
+                <TransparentMovementTransition
+                  id={actualProjectId}
+                  x="none"
+                  y="bottom"
+                >
+                  <article className="flex flex-col gap-y-5">
+                    {/* Projects Images */}
+                    <Images items={items} actualProjectId={actualProjectId} />
+                    {/* Transition when language changes for the description */}
+                    <ToggleLanguageTransition>
+                      <p
+                        className={`font-bold font-mono text-center text-xs text-black dark:text-white
+                          md:text-sm lg:text-md xl:text-lg 2xl:text-xl
+                          transition-colors ease-in-out`}
+                      >
+                        {projectDescriptions[actualProjectId]}
+                      </p>
+                    </ToggleLanguageTransition>
+                    {/* Footer Links */}
+                    <Footer items={items} actualProjectId={actualProjectId} />
+                  </article>
+                </TransparentMovementTransition>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-    </main>
+      {/* Image Aside */}
+      <AsideImage altImage={altImage} />
+    </>
   );
 }
 
-const itemsProjects = [
+/* Items for the component - My Projects */
+
+const items = [
   {
-    gihub: "https://github.com/eldavid1996/MendoGames",
+    name: "MendoGames",
+    icon: <MendoGamesLogo />,
+    github: "https://github.com/eldavid1996/MendoGames",
     web: "https://eldavid1996.github.io/MendoGames/",
+    images: [
+      <Image
+        key={0}
+        priority
+        title="Home"
+        alt="Home"
+        src="/images/projects/mendogames/mendogames1.png"
+        width={1612}
+        height={832}
+        className="w-full h-auto rounded-3xl"
+      />,
+      <Image
+        key={1}
+        priority
+        title="Games"
+        alt="Games"
+        src="/images/projects/mendogames/mendogames2.png"
+        width={1648}
+        height={880}
+        className="w-full h-auto rounded-3xl"
+      />,
+      <Image
+        key={2}
+        priority
+        title="Form"
+        alt="Form"
+        src="/images/projects/mendogames/mendogames3.png"
+        width={1708}
+        height={806}
+        className="w-full h-auto rounded-3xl"
+      />,
+    ],
   },
   {
-    gihub: "https://github.com/eldavid1996/BRoom",
+    name: "BRoom",
+    icon: <BRoomLogo />,
+    github: "https://github.com/eldavid1996/BRoom",
     web: "https://broom-sigma.vercel.app/",
+    images: [
+      <Image
+        key={0}
+        priority
+        title="Login"
+        alt="Login"
+        src="/images/projects/broom/broom1.png"
+        width={1177}
+        height={872}
+        className="w-full h-auto rounded-3xl"
+      />,
+      <Image
+        key={1}
+        priority
+        title="Tasks"
+        alt="Tasks"
+        src="/images/projects/broom/broom2.png"
+        width={1482}
+        height={772}
+        className="w-full h-auto rounded-3xl"
+      />,
+      <Image
+        key={2}
+        priority
+        title="Tasks Users"
+        alt="Tasks Users"
+        src="/images/projects/broom/broom3.png"
+        width={596}
+        height={845}
+        className="w-full h-auto rounded-3xl"
+      />,
+    ],
   },
   {
-    gihub: "https://github.com/eldavid1996/MendozApp",
+    name: "MendozApp",
+    icon: <MendoZappLogo />,
+    github: "https://github.com/eldavid1996/MendozApp",
     web: "https://eldavid1996.github.io/MendozApp/",
+    images: [
+      <Image
+        key={0}
+        priority
+        title="Register"
+        alt="Register"
+        src="/images/projects/mendozapp/mendozapp1.png"
+        width={518}
+        height={766}
+        className="w-full h-auto rounded-3xl"
+      />,
+      <Image
+        key={1}
+        priority
+        title="Login"
+        alt="Login"
+        src="/images/projects/mendozapp/mendozapp2.png"
+        width={511}
+        height={520}
+        className="w-full h-auto rounded-3xl"
+      />,
+      <Image
+        key={2}
+        priority
+        title="Chat"
+        alt="Chat"
+        src="/images/projects/mendozapp/mendozapp3.png"
+        width={1361}
+        height={800}
+        className="w-full h-auto rounded-3xl"
+      />,
+    ],
   },
 ];

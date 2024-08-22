@@ -1,39 +1,36 @@
 {
-  "languageTogglerTitle": "Toggle language",
-  "themeTogglerTitle": "Toggle theme",
-  "navBar": {
-    "home": "Home",
-    "aboutme": "About me",
-    "projects": "Projects",
-    "studies": "Studies"
-  },
-  "home": {
-    "headerTitle": "Home",
-    "introduccion": {
-      "altImage": "A guy working on a computer",
-      "headerTitle": "Hi, I'm Mendoza,",
-      "headerSubtitle1": "Frontend Developer",
-      "headerSubtitle2": "Backend Developer",
-      "headerSubtitle3": "Software Developer",
-      "headerSubtitle4": "Systems Administrator",
-      "content": "Fontend and backend developer dedicated to combining design and functionality to create impactful and accessible digital experiences",
-      "textLink1": "My projects",
-      "textLink2": "Link to my CV"
-    }
-  },
-  "projects": {
-    "myProjects": {
-      "headerTitle": "My lastest ",
-      "headerSubtitle": "works done",
-      "projectDescription": [
-        "Website to download games for free",
-        "System to manage the cleaning of hotel rooms",
-        "Web Chat with a similar design to Whatsapp"
-      ]
-    }
-  },
-  "notFound": {
-    "headerTitle": "Page not found",
-    "headerSubtitle": "The page you are looking for does not exist"
-  }
+  "header.title": "Home",
+
+  "languageToggler.title": "Toggle language",
+
+  "themeToggler.title": "Toggle theme",
+
+  "navBar.home": "Home",
+  "navBar.aboutMe": "About me",
+  "navBar.projects": "Projects",
+  "navBar.studies": "Studies",
+
+  "home.altImage": "A guy working on a computer",
+  "home.headerTitle": "Hi, I'm Mendoza,",
+  "home.headerSubtitles": [
+    "Frontend Developer",
+    "Backend Developer",
+    "Software Developer",
+    "Systems Administrator"
+  ],
+  "home.content": "Frontend and backend developer dedicated to combining design and functionality to create impactful and accessible digital experiences",
+  "home.textLink1": "My projects",
+  "home.textLink2": "Link to my CV",
+
+  "projects.altImage": "A guy looking a list of projects",
+  "projects.headerTitle": "My latest ",
+  "projects.headerSubtitle": "works done",
+  "projects.projectDescriptions": [
+    "Website to download games for free",
+    "System to manage the cleaning of hotel rooms",
+    "Web Chat with a similar design to Whatsapp"
+  ],
+
+  "notFound.headerTitle": "Page not found",
+  "notFound.headerSubtitle": "The page you are looking for does not exist"
 }
