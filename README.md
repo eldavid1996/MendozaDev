@@ -34,8 +34,6 @@ Can be used too like a template for make it better!
 
 **2º Install modules**
 
-In folders server and client:
-
         npm install; npm run dev;
 
 ## ⭐️ GIVE IT A STAR
