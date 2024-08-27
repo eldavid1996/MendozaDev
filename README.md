@@ -30,7 +30,7 @@ Can be used too like a template for make it better!
 
 **1º Clone this repository**
 
-       https://github.com/eldavid1996/eldavid1996.github.io
+       https://github.com/eldavid1996/MendozaDev
 
 **2º Install modules**
 
