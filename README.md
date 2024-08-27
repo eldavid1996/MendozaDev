@@ -1,7 +1,7 @@
 # 🦄 Portfolio Web using Next.js with Typescript and Tailwind
-![mendozadev1](https://github.com/user-attachments/assets/907993e5-2ede-4d72-ad80-3ecde05d7367)
-![mendozadev2](https://github.com/user-attachments/assets/6756c6cd-a8c4-4f03-970d-95d0352f8b71)
+![image](https://github.com/user-attachments/assets/b57ebc55-c511-4b5f-a159-8e5074c7c160)
 
+![image](https://github.com/user-attachments/assets/3b45196b-810a-4d18-a45e-cf8a491c91b8)
 
 + David Mendoza
   - https://github.com/eldavid1996
