@@ -22,6 +22,8 @@
   "home.textLink1": "My projects",
   "home.textLink2": "Link to my CV",
 
+  "aboutMe.altImage": "A guy looking at his phone",
+
   "projects.altImage": "A guy looking a list of projects",
   "projects.headerTitle": "My latest ",
   "projects.headerSubtitle": "works done",
@@ -30,6 +32,8 @@
     "System to manage the cleaning of hotel rooms",
     "Web Chat with a similar design to Whatsapp"
   ],
+
+  "studies.altImage": "A guy reading a book",
 
   "notFound.headerTitle": "Page not found",
   "notFound.headerSubtitle": "The page you are looking for does not exist"

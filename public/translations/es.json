@@ -22,6 +22,8 @@
   "home.textLink1": "Mis proyectos",
   "home.textLink2": "Enlace a mi CV",
 
+  "aboutMe.altImage": "Un chico mirando su telefono",
+
   "projects.altImage": "Un chico mirando una lista de proyectos",
   "projects.headerTitle": "Mis últimos ",
   "projects.headerSubtitle": "trabajos realizados",
@@ -30,6 +32,8 @@
     "Sistema para gestionar la limpieza de habitaciones de hoteles",
     "Chat web moderno con un diseño similar al de Whatsapp"
   ],
+
+  "studies.altImage": "Un chico leyendo un libro",
 
   "notFound.headerTitle": "Página no encontrada",
   "notFound.headerSubtitle": "La página que solicitaste no existe"

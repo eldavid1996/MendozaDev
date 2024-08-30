@@ -55,9 +55,9 @@ export default function RootLayout({
               {/* Spinner for show in first load page while loading */}
               <SpinnerFirstLoadPage />
 
-              {/* Use the context useNavigationContext for make agradable transition between pages */}
+              {/* <Main> Use the context useNavigationContext for make agradable transition between pages */}
               <PageNavigateTransition>
-                {/* <Main> Other little transition animation when components content loads */}
+                {/* Other little transition animation when components content loads */}
                 <TransparentTransitionPages>
                   {/* Main content (routes) */}
                   {children}

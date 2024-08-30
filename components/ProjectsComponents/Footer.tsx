@@ -18,7 +18,7 @@ export function Footer({ items, actualProjectId }: FooterProps) {
       {links.map((link, index) => (
         <div
           key={index}
-          className={`rounded-full hover:animate-pulse 
+          className={`rounded-full hover:animate-pulse active:animate-ping
               transform xl:hover:scale-125 transition-transform duration-500 ease-in-out`}
         >
           <div

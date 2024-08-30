@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useLanguageContext } from "@/app/context/LanguageContext";
+import { TransparentMovementTransition } from "@/components/Shared/TransparentMovementTransition";
+import { ToggleLanguageTransition } from "@/components/Shared/ToggleLanguageTransition";
 import { BRoomLogo, MendoGamesLogo, MendoZappLogo } from "./Icons";
 import { Image as AsideImage } from "./Image";
 import { Header } from "./Header";
 import { NavBar } from "./NavBar";
 import { Images } from "./Images";
 import { Footer } from "./Footer";
-import { TransparentMovementTransition } from "../Shared/TransparentMovementTransition";
-import { ToggleLanguageTransition } from "../Shared/ToggleLanguageTransition";
 
 export function ProjectsComponent() {
   const [actualProjectId, setActualProject] = useState(0);
@@ -23,7 +23,7 @@ export function ProjectsComponent() {
 
   return (
     <>
-      <section
+      <article
         className={`relative flex flex-col h-screen items-center justify-center
           max-md:flex-col`}
       >
@@ -48,7 +48,7 @@ export function ProjectsComponent() {
                  transition-shadow duration-1000 ease-in-out`}
             >
               <div
-                className={`flex flex-col rounded-3xl p-4 md:p-8 gap-4 bg-white/60 dark:bg-black/60
+                className={`flex flex-col rounded-3xl p-3 md:p-8 gap-4 bg-white/60 dark:bg-black/60
                   transition-colors duration-1000 ease-in-out`}
               >
                 {/* Transition when project changes */}
@@ -57,7 +57,7 @@ export function ProjectsComponent() {
                   x="none"
                   y="bottom"
                 >
-                  <article className="flex flex-col gap-y-5">
+                  <section className="flex flex-col gap-y-5">
                     {/* Projects Images */}
                     <Images items={items} actualProjectId={actualProjectId} />
                     {/* Transition when language changes for the description */}
@@ -72,13 +72,13 @@ export function ProjectsComponent() {
                     </ToggleLanguageTransition>
                     {/* Footer Links */}
                     <Footer items={items} actualProjectId={actualProjectId} />
-                  </article>
+                  </section>
                 </TransparentMovementTransition>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </article>
       {/* Image Aside */}
       <AsideImage altImage={altImage} />
     </>

@@ -30,7 +30,7 @@ export function Card({
           transition-shadow duration-1000 ease-in-out`}
       >
         <div
-          className={`flex flex-col rounded-3xl p-8 gap-2 bg-white/60 dark:bg-black/60
+          className={`flex flex-col rounded-3xl p-7 gap-2 bg-white/60 dark:bg-black/60
             xs:gap-4 sm:gap-8 md:gap-10 lg:gap-12 
             transition-colors duration-1000 ease-in-out`}
         >

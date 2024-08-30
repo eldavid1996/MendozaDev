@@ -8,8 +8,6 @@ export const UserIcon = (props: SVGProps<SVGSVGElement>) => {
       className={`w-6 h-6 md:w-10 md:h-10`}
       {...props}
     >
-      <title />
-
       <g data-name="Layer 2" id="Layer_2">
         <g data-name="—ÎÓÈ 1" id="_ÎÓÈ_1">
           <circle cx="30.8999" cy="30.8999" fill="#ffc200" r="30.8999" />

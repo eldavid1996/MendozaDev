@@ -33,7 +33,7 @@ export function Images({
       {images.map((image, index) => (
         <span
           key={index}
-          className="transform xl:hover:scale-110 transition-transform duration-500 ease-in-out "
+          className="hover:animate-pulse active:animate-ping transform xl:hover:scale-110 transition-transform duration-500 ease-in-out "
         >
           {/* Animation when image selected is unselected */}
           <motion.div

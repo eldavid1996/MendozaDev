@@ -27,7 +27,7 @@ export function PageNavigateTransition(props: PageNavigateTransitionProps) {
 
   return (
     <AnimatePresence mode="wait" onExitComplete={handleExitComplete}>
-      <motion.div
+      <motion.main
         key={actualPage}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -35,7 +35,7 @@ export function PageNavigateTransition(props: PageNavigateTransitionProps) {
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         {showChildren && props.children}
-      </motion.div>
+      </motion.main>
     </AnimatePresence>
   );
 }

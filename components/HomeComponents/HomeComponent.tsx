@@ -21,10 +21,9 @@ export function HomeComponent() {
     <article
       className={`relative flex h-screen items-center justify-center xl:justify-end`}
     >
-      {/* Little Animation to component when content loads */}
+      {/* Image Aside */}
+      <AsideImage altImage={altImage} />
       <section>
-        {/* Image Aside */}
-        <AsideImage altImage={altImage} />
         {/* Little Animation when language changes */}
         <ToggleLanguageTransition>
           {/* Card Section */}
