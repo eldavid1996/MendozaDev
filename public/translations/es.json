@@ -34,6 +34,18 @@
   ],
 
   "studies.altImage": "Un chico leyendo un libro",
+  "studies.studiesTitles": [
+    "Desarrollo de Aplicaciones Web (DAW)",
+    "Administración de Sistemas Informáticos en Red (ASIR)",
+    "Sistemas Microinformáticos y Redes (SMR)",
+    "Instalación de Fibra Óptica"
+  ],
+  "studies.studiesDescriptions": [
+    "CFGS - IES SAN SEBASTIÁN - HUELVA - 2024",
+    "CFGS - IES SAN SEBASTIÁN - HUELVA - 2022",
+    "CFGM - IES SAN SEBASTIÁN - HUELVA - 2017",
+    "CURSO - CRUZ ROJA - HUELVA - 2019"
+  ],
 
   "notFound.headerTitle": "Página no encontrada",
   "notFound.headerSubtitle": "La página que solicitaste no existe"

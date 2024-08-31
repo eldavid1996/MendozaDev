@@ -17,10 +17,7 @@ export function LeftCard({ title, items }: LeftCardProps) {
           className={`flex flex-col rounded-3xl text-center items-center p-2 gap-2 bg-white/60 dark:bg-black/60 
              lg:flex-row md:p-5 md:gap-5 transition-colors duration-1000 ease-in-out`}
         >
-          <h2
-            className="text-md font-bold text-black dark:text-white 
-               lg:text-2xl transition-colors ease-in-out "
-          >
+          <h2 className={`text-md font-bold text-secondary lg:text-2xl`}>
             {title}
           </h2>
           <div className="flex flex-wrap justify-center gap-3 lg:gap-5">

@@ -34,6 +34,18 @@
   ],
 
   "studies.altImage": "A guy reading a book",
+  "studies.studiesTitles": [
+    "Web Application Development (DAW)",
+    "Administration of Computer Network Systems (ASIR)",
+    "Microcomputer Systems and Networks (SMR)",
+    "Fiber Optic Installation"
+  ],
+  "studies.studiesDescriptions": [
+    "CFGS - IES SAN SEBASTIÁN - HUELVA - 2024",
+    "CFGS - IES SAN SEBASTIÁN - HUELVA - 2022",
+    "CFGM - IES SAN SEBASTIÁN - HUELVA - 2017",
+    "COURSE - RED CROSS - HUELVA - 2019"
+  ],
 
   "notFound.headerTitle": "Page not found",
   "notFound.headerSubtitle": "The page you are looking for does not exist"
