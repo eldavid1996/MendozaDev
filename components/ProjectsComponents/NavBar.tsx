@@ -57,7 +57,7 @@ export function NavBar({
 
 /* Buttons for a future use with for more projects */
 
-/* button
+/* <button
         title="Previous project"
         // onClick={handleLeftClick}
         className="max-sm:hidden p-2 rounded-full shadow-lg bg-light-bg/75 dark:bg-dark-bg/75 transform hover:scale-110 duration-300 ease-in-out"

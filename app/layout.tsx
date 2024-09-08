@@ -21,9 +21,26 @@ import {
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mendozadev.vercel.app"),
   title: "MendozaDev",
   description:
-    "Portfolio web made by David Mendoza for show my works and skills",
+    "Portfolio web made by David Mendoza to showcase my works and skills",
+  openGraph: {
+    title: "MendozaDev",
+    description:
+      "Portfolio web made by David Mendoza to showcase my works and skills",
+    url: "https://mendozadev.vercel.app",
+    siteName: "MendozaDev",
+    images: [
+      {
+        url: "/images/preview.png", // Web Preview Image
+        width: 800,
+        height: 600,
+        alt: "Imagen de vista previa de MendozaDev",
+      },
+    ],
+    type: "website",
+  },
   icons: {
     icon: "favicon.ico",
   },

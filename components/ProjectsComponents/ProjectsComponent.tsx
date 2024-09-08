@@ -9,9 +9,11 @@ import { Header } from "./Header";
 import { NavBar } from "./NavBar";
 import { Images } from "./Images";
 import { Footer } from "./Footer";
+import { FullImages } from "./FullImages";
 
 export function ProjectsComponent() {
   const [actualProjectId, setActualProject] = useState(0);
+  const [imageSelected, setImageSelected] = useState<number | null>(null);
   const { translation } = useLanguageContext();
 
   const {
@@ -59,7 +61,11 @@ export function ProjectsComponent() {
                 >
                   <section className="flex flex-col gap-y-5">
                     {/* Projects Images */}
-                    <Images items={items} actualProjectId={actualProjectId} />
+                    <Images
+                      items={items}
+                      actualProjectId={actualProjectId}
+                      setImageSelected={setImageSelected}
+                    />
                     {/* Transition when language changes for the description */}
                     <ToggleLanguageTransition>
                       <p
@@ -79,6 +85,13 @@ export function ProjectsComponent() {
           </div>
         </div>
       </article>
+      {/* Full Images */}
+      <FullImages
+        items={items}
+        actualProjectId={actualProjectId}
+        imageSelected={imageSelected}
+        setImageSelected={setImageSelected}
+      />
       {/* Image Aside */}
       <AsideImage altImage={altImage} />
     </>

@@ -14,19 +14,12 @@ export function NavItem(
   { index, item, actualProjectId, setActualProject }: NabItemProps,
   key: Key | null | undefined
 ) {
-  function handleClick(index: number) {
-    setActualProject(index);
-
-    // When image is selected and changes between projects
-    document.getElementById("full-image-project")?.click();
-  }
-
   return (
     <li key={key}>
       <button
         title={item.name}
         aria-label={item.name}
-        onClick={() => handleClick(index)}
+        onClick={() => setActualProject(index)}
         className={`flex rounded-full hover:animate-pulse active:animate-ping 
            transform xl:hover:scale-105 duration-500 ease-in-out`}
       >

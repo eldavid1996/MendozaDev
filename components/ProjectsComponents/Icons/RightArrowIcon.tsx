@@ -8,8 +8,7 @@ export const RightArrowIcon = (props: SVGProps<SVGSVGElement>) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={`w-10 text-black dark:text-white
-         transition-colors ease-in-out`}
+      className={`w-12 text-white/80 `}
       {...props}
     >
       <path
